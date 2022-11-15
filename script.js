@@ -1,7 +1,7 @@
 let possibleCharacters = []
 
-
 // Assignment Code
+// Global variables
 function generatePassword() {
   var generateBtn = document.querySelector("#generate");
   var characters = ["lowercase letters", "uppercase letters", "numbers", "special characters"]
@@ -26,7 +26,6 @@ function generatePassword() {
   let selectedLowercase = confirm("Do you want lowercase characters?");
     if (selectedLowercase) {
       alert("Your password will have lowercase characters.");
-      // possibleCharacters.concat(lowercase)
     }
     else {
       alert("Your password will NOT have lowercase characters.");
@@ -64,6 +63,7 @@ function generatePassword() {
   if (selectedLowercase === false && selectedUppercase === false && selectedNumbers === false && selectedSpecialCharacters === false) {
     return "Please select at least one character type.";
   };
+
 // group selected characters
   if (selectedLowercase) {
     possibleCharacters = possibleCharacters.concat(lowercase);
